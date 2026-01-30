@@ -124,7 +124,7 @@ data "aws_dx_connection" "aws_connection_2" {
     equinix_fabric_connection.vd2AWS_Sec
   ]
   name = "Sec-${random_pet.this.id}"
-  provider = aws.us-west-1
+  provider = aws.ap-east-1
 }
 
 ## to accept AWS Dx Connection - for secondary  connection 
@@ -134,7 +134,7 @@ depends_on = [
     equinix_fabric_connection.vd2AWS_Sec
   ]
   connection_id = data.aws_dx_connection.aws_connection_2.id
-  provider = aws.us-west-1
+  provider = aws.ap-east-1
 }
 
 
